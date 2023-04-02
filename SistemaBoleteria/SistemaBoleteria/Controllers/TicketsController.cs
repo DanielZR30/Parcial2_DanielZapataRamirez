@@ -20,14 +20,18 @@ namespace TicketSystem.Controllers
         }
 
         // GET: Tickets
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int? page)
         {
-            int pageSize = 200,pageNumber = 1;
+            if(page == null || page <= 0) page = 1;
+            int pageSize = 20;
+
+            ViewBag.Page = page;
 
             return _context.Tickets != null ? 
                           View(await _context.Tickets
-                .OrderBy(t => t.Id).Skip((pageNumber - 1) * pageSize)
-                .Take(pageSize).ToListAsync()) :
+                            .OrderBy(t => t.Id)
+                            .Skip((int)((page - 1) * pageSize))
+                            .Take((int)pageSize).ToListAsync()) :
                           Problem("Entity set 'DatabaseContext.Tickets'  is null.");
         }
 
