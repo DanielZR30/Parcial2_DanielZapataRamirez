@@ -29,7 +29,7 @@ namespace TicketSystem.Controllers
 
             return _context.Tickets != null ? 
                           View(await _context.Tickets
-                            .OrderBy(t => t.Id)
+                            .OrderByDescending(t => t.EntranceGate)
                             .Skip((int)((page - 1) * pageSize))
                             .Take((int)pageSize).ToListAsync()) :
                           Problem("Entity set 'DatabaseContext.Tickets'  is null.");
@@ -71,7 +71,7 @@ namespace TicketSystem.Controllers
 
             if (t == null)
             {
-                ModelState.AddModelError(string.Empty, "Este numero de boleta no parece correcto, por favor verifique.");
+                ModelState.AddModelError(string.Empty, "Boleta no valida, por favor verifique.");
             }else if(t.IsUsed)
             {
                 ModelState.AddModelError(string.Empty, $"Este numero de boleta ya fue registrado el {t.UseDate} en la entrada {t.UseDate}.");

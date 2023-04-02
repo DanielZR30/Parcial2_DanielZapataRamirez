@@ -20,7 +20,14 @@
             @Html.DisplayNameFor(model => model.IsUsed)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.IsUsed)
+            @if (Model.IsUsed)
+            {
+                <p>Si</p>
+            }
+            else
+            {
+                <p>No</p>
+            }
         </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.EntranceGate)
@@ -31,6 +38,5 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index" class="btn btn-primary">Back to List</a>
 </div>

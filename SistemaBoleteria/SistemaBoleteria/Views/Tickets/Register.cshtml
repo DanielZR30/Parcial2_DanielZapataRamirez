@@ -12,12 +12,12 @@
         <form asp-action="Register">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group form-floating d-inline-flex py-3">
-                <div class="form-floating h-50 px-2">
+                <div class="form-floating pr-2" style="width:350px;">
                     <input asp-for="Id" class="form-control" id="floatingInput" placeholder="Numero de boleto">
                     <label asp-for="Id" for="floatingInput">Numero de boleto</label>
                     <span asp-validation-for="Id" class="text-danger"></span>
                 </div>
-                <div class="h-50">
+                <div class="h-100 px-3">
                     <select asp-for="EntranceGate">
                         <option value="Norte">Norte</option>
                         <option value="Sur">Sur</option>
@@ -26,7 +26,6 @@
                     </select>
                     <span asp-validation-for="EntranceGate" class="text-danger"></span>
                 </div>
-
             </div>
             <div class="form-group">
                 <input type="submit" value="Register" class="btn btn-primary" />
