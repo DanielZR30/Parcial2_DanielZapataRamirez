@@ -656,9 +656,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\dzapa\\Documents\\Programacion de software\\Parcial2_DanielZapataRamirez\\SistemaBoleteria\\SistemaBoleteria\\SistemaBoleteria.csproj",
-      "projectName": "SistemaBoleteria",
-      "projectPath": "D:\\dzapa\\Documents\\Programacion de software\\Parcial2_DanielZapataRamirez\\SistemaBoleteria\\SistemaBoleteria\\SistemaBoleteria.csproj",
+      "projectUniqueName": "D:\\dzapa\\Documents\\Programacion de software\\Parcial2_DanielZapataRamirez\\SistemaBoleteria\\SistemaBoleteria\\TicketSystem.csproj",
+      "projectName": "TicketSystem",
+      "projectPath": "D:\\dzapa\\Documents\\Programacion de software\\Parcial2_DanielZapataRamirez\\SistemaBoleteria\\SistemaBoleteria\\TicketSystem.csproj",
       "packagesPath": "C:\\Users\\dzapa\\.nuget\\packages\\",
       "outputPath": "D:\\dzapa\\Documents\\Programacion de software\\Parcial2_DanielZapataRamirez\\SistemaBoleteria\\SistemaBoleteria\\obj\\",
       "projectStyle": "PackageReference",

@@ -1,12 +1,17 @@
-﻿namespace SistemaBoleteria.DAL.Entities
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace SistemaBoleteria.DAL.Entities
 {
-    public class Ticket
+    public class Ticket : Entity
     {
-        public DateTime? _UseDate { get; set; }
+        [Display(Name = "¿Tiquete utilizado?")]
+        public DateTime? UseDate { get; set; }
 
-        public bool _IsUsed { get; set; } = false;
+        [Display(Name = "Puerta de Ingreso")]
+        public bool IsUsed { get; set; } = false;
 
-        public string? _EntranceGate { get; set; }
+        [Display(Name = "Puerta de Ingreso")]
+        public string? EntranceGate { get; set; }
 
     }
 }

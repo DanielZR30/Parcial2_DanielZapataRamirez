@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaBoleteria", "SistemaBoleteria\SistemaBoleteria.csproj", "{CF1A1377-4BF9-42D7-B3DE-D80AD165E78E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicketSystem", "SistemaBoleteria\TicketSystem.csproj", "{CF1A1377-4BF9-42D7-B3DE-D80AD165E78E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

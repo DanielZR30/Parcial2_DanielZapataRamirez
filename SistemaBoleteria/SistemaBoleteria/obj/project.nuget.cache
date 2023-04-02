@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kqSb8UfGhESo19MCf66C2a9UnYFVSxuXaMBpgu9SvQet9sUos1nF9cmtAXkWqvkPnQi8n+X2EgqaDnQPuGI5tg==",
+  "dgSpecHash": "+ydtfZ1svSm8ctY9owfHoOtmbKgHcL4uET+2FO6tpQTAnf3IvmMrI9Yl1zqyRA03eIU59/X0V/N6IBhiK30Dvg==",
   "success": true,
-  "projectFilePath": "D:\\dzapa\\Documents\\Programacion de software\\Parcial2_DanielZapataRamirez\\SistemaBoleteria\\SistemaBoleteria\\SistemaBoleteria.csproj",
+  "projectFilePath": "D:\\dzapa\\Documents\\Programacion de software\\Parcial2_DanielZapataRamirez\\SistemaBoleteria\\SistemaBoleteria\\TicketSystem.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dzapa\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.4\\microsoft.entityframeworkcore.7.0.4.nupkg.sha512",
     "C:\\Users\\dzapa\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.4\\microsoft.entityframeworkcore.abstractions.7.0.4.nupkg.sha512",
