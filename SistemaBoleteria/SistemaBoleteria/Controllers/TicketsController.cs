@@ -49,8 +49,8 @@ namespace TicketSystem.Controllers
             return View(ticket);
         }
 
-        // GET: Tickets/Create
-        public IActionResult Create()
+        // GET: Tickets/Register
+        public IActionResult Register()
         {
             return View();
         }
@@ -60,15 +60,30 @@ namespace TicketSystem.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("UseDate,IsUsed,EntranceGate,Id")] Ticket ticket)
+        public async Task<IActionResult> Register(Ticket? ticket)
         {
+
+            var t = await _context.Tickets.FirstOrDefaultAsync(tk => tk.Id == ticket.Id);
+
+            if (t == null)
+            {
+                ModelState.AddModelError(string.Empty, "Este numero de boleta no parece correcto, por favor verifique.");
+            }else if(t.IsUsed)
+            {
+                ModelState.AddModelError(string.Empty, $"Este numero de boleta ya fue registrado el {t.UseDate} en la entrada {t.UseDate}.");
+            }
+
+
             if (ModelState.IsValid)
             {
-                ticket.Id = Guid.NewGuid();
-                _context.Add(ticket);
+                t.IsUsed = true;
+                t.UseDate = DateTime.Now;
+                t.EntranceGate = ticket.EntranceGate;
+                _context.Update(t);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+
             return View(ticket);
         }
 
