@@ -6,15 +6,15 @@
 
 <link rel="stylesheet" href="https://cdn.datatables.net/1.13.3/css/jquery.dataTables.min.css" />
 
-<p>
-    <a asp-action="Create" class="btn btn-outline-primary">Crear nuevo país</a>
-</p>
 
 <div class="row">
     <div class="col-md-12">
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h3 class="panel-title">Boletos</h3>
+            </div>
+            <div class="py-2">
+                <a asp-action="Register" class="btn btn-primary">Registrar</a>
             </div>
             <div class="panel-body">
                 <table class="table table-hover table-responsive table-striped" id="TicketTable">
@@ -52,9 +52,9 @@
                                     @Html.DisplayFor(modelItem => item.UseDate)
                                 </td>
                                 <td>
-                                    <a asp-action="Edit" asp-route-countryId="@item.Id" class="btn btn-outline-warning">Editar</a>
-                                    <a asp-action="Details" asp-route-countryId="@item.Id" class="btn btn-outline-info">Detalles</a>
-                                    <a asp-action="Delete" asp-route-countryId="@item.Id" class="btn btn-outline-danger">Eliminar</a>
+                                    <a asp-action="Edit" asp-route-ticketId="@item.Id" class="btn btn-outline-warning">Editar</a>
+                                    <a asp-action="Details" asp-route-ticketId="@item.Id" class="btn btn-outline-info">Detalles</a>
+                                    <a asp-action="Delete" asp-route-ticketId="@item.Id" class="btn btn-outline-danger">Eliminar</a>
                                 </td>
                             </tr>
                         }
