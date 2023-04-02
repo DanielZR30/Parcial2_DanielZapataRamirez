@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using SistemaBoleteria.Models;
+using TicketSystem.Models;
 using System.Diagnostics;
 
-namespace SistemaBoleteria.Controllers
+namespace TicketSystem.Controllers
 {
     public class HomeController : Controller
     {

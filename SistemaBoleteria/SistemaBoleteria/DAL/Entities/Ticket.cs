@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace SistemaBoleteria.DAL.Entities
+namespace TicketSystem.DAL.Entities
 {
     public class Ticket : Entity
     {

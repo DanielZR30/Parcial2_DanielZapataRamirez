@@ -1,12 +1,12 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace SistemaBoleteria.DAL.Entities
+namespace TicketSystem.DAL.Entities
 {
     public class Entity
     {
         [Key]
         [Required]
-        public  int Id { get; set; }
+        public  Guid Id { get; set; }
 
     }
 }

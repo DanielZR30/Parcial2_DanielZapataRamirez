@@ -1,4 +1,4 @@
-namespace SistemaBoleteria.Models
+namespace TicketSystem.Models
 {
     public class ErrorViewModel
     {

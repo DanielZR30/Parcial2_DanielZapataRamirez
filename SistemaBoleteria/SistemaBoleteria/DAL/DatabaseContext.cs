@@ -1,9 +1,22 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using namespace SistemaBoleteria 
+using System.Diagnostics.Metrics;
+using TicketSystem.DAL.Entities;
 
-namespace SistemaBoleteria.DAL
+namespace TicketSystem.DAL
 {
     public class DatabaseContext : DbContext
     {
+        public DatabaseContext(DbContextOptions<DatabaseContext> options) : base(options)
+        {
+
+        }
+
+        public DbSet<Ticket> Tickets { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+        }
+
     }
 }
